@@ -1,10 +1,14 @@
 package com.learning.chapter1.web;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
+
+
 
     @RequestMapping("/hello")
     public String index(){
