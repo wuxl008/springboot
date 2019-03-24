@@ -9,16 +9,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
 /**
- *
- * @author 程序猿DD
- * @version 1.0.0
- * @blog http://blog.didispace.com
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -31,6 +26,10 @@ public class BlogPropertiesTest {
     private BlogProperties blogProperties;
 
 
+    /**
+     *
+     * @throws Exception
+     */
     @Test
     public void test1() throws Exception {
         Assert.assertEquals("wuxl", blogProperties.getName());
