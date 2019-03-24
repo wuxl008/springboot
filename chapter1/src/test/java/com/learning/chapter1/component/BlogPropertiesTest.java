@@ -28,10 +28,9 @@ public class BlogPropertiesTest {
 
     /**
      *
-     * @throws Exception
      */
     @Test
-    public void test1() throws Exception {
+    public void test1() {
         Assert.assertEquals("wuxl", blogProperties.getName());
         Assert.assertEquals("learning", blogProperties.getTitle());
 //        Assert.assertEquals("程序猿DD正在努力写《Spring Boot教程》", blogProperties.getDesc());
