@@ -3,21 +3,16 @@ package com.leecode.study;
 public class NumberOfArithmeticSlices {
 
 
-    static int number(int[] numList) {
-        int length = numList.length;
-        int aritheticNum = 0;
-        for (int subStart = 0; subStart < length - 2; subStart++) {
-            int lengthToEnd = length - subStart;
-            for (int sublength = 3; sublength <= lengthToEnd; sublength++) {
-                int equalNum = 0;
-                for (int k = 0; k < sublength - 2; k++) {
-                    if ((numList[subStart + k] - numList[subStart + k + 1]) == (numList[subStart + k + 1] - numList[subStart + k + 2]))
-                        equalNum++;
-                }
-                if (equalNum == sublength - 2) aritheticNum++;
+    public static int number(int[] A) {
+        int[] dp = new int[A.length];
+        int sum = 0;
+        for (int i = 2; i < dp.length; i++) {
+            if (A[i] - A[i - 1] == A[i - 1] - A[i - 2]) {
+                dp[i] = 1 + dp[i - 1];
+                sum += dp[i];
             }
         }
-        return aritheticNum;
+        return sum;
     }
 
 
